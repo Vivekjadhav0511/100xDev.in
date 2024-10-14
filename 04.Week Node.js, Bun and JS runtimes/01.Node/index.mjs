@@ -17,3 +17,6 @@ console.log(chalk.yellow("Hello Js"));
 fs.readFile("a.txt","utf-8",function(error,data){
      console.log(data)
 })
+
+
+
