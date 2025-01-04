@@ -28,3 +28,5 @@ The fs (Filesystem) package is used to read, write, update contents on the files
 
 // 5.5.0 major minor patch version 
 
+console.log("****** Assignment ****")
+
