@@ -38,6 +38,7 @@ const ans3 = sum(10000);
 console.log(ans3);
 
 
+const { log } = require("console");
 // I/O heavy operations ( Synchronously (One by one))
 
 const fs = require("fs");
@@ -96,3 +97,39 @@ function first() {
     console.log("Second");
   }
   second();
+
+// ******* Restart **********
+
+function SumofTwoNumber(a,b){
+  return a +  b
+}
+
+let result = SumofTwoNumber(10,20)
+console.log(result)
+
+
+function sumOfNumberTillNthNumber(num){
+  result = num *  (num + 1)
+  return result
+}
+
+let sumOfNumberTillNthNumbers= sumOfNumberTillNthNumber(5)
+
+console.log( "sumOfNumberTillNthNumber :-" , sumOfNumberTillNthNumbers)
+
+function sumofNumberss(num){
+      let result = 0
+      for(let i=1; i<=num; i++){
+        result = result + i
+      }
+      return result
+}
+
+let totalAddition = sumofNumberss(5)
+console.log("totalAddition:-" , totalAddition )
+
+let content = fs.readFile('a.txt','utf-8',(err,data)=>{
+     console.log(err,data)
+})  // Asynchronously reads the entire contents of a file.
+ 
+console.log(content)
