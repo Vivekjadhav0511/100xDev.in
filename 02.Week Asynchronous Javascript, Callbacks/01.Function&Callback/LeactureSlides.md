@@ -6,3 +6,4 @@
 How JS Executes Asynchronous Code -`http://latentflip.com/loupe/`
 
 Good Talk - Concurrency is Not Parallelism  - `https://www.youtube.com/watch?v=oV9rvDllKEg`
+  

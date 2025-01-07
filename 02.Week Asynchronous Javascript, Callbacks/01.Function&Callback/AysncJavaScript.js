@@ -38,7 +38,7 @@ const ans3 = sum(10000);
 console.log(ans3);
 
 
-const { log } = require("console");
+const { log, error } = require("console");
 // I/O heavy operations ( Synchronously (One by one))
 
 const fs = require("fs");
@@ -129,7 +129,26 @@ let totalAddition = sumofNumberss(5)
 console.log("totalAddition:-" , totalAddition )
 
 let content = fs.readFile('a.txt','utf-8',(err,data)=>{
-     console.log(err,data)
+     console.log(data)
 })  // Asynchronously reads the entire contents of a file.
  
 console.log(content)
+
+let contentFormfileB = fs.readFileSync('b.txt',"utf-8",(err,data)=>{
+   console.log(data)
+})
+console.log(contentFormfileB) 
+
+// ***** FUNCTIONAL ARGUMENTS *******
+
+function callbackFunction(err,data){
+  if(err){
+    console.log("Erorr Is :-" ,err)
+  }else{
+    console.log("Data is :-" , data)
+  }
+}
+
+const contentReading = fs.readFile('a.txt','utf8',callbackFunction)
+
+console.log(contentReading)
