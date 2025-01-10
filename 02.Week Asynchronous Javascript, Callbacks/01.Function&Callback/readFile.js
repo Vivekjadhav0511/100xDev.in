@@ -38,3 +38,41 @@ Done ! First Before The Readfile
   thread will not stuck overtheir
   
   */
+
+
+  const map = new Map()
+  map.set('userName', "vivek@gmail.com")
+  map.set('userName', "vivek@gmail.com")
+  map.set('pass', "pass@123")
+  map.set('pass', "pass@123")
+  map.set('DOB', "01-01-2001")
+  console.log(map)
+
+  // Doesn't Take A Duplicate value 
+
+  console.log(map.get('userName'))  // vivek@gmail.com => Accessing Value Through Key
+
+let fetchData =  new Promise((res,rej)=>{
+  let x = 1
+    if(x==1){
+      res(fetch('https://api.github.com/users/vivekjadhav0511'))
+    }else{
+      rej("Something Is Went Wrong")
+    }
+  })
+
+
+fetchData.then((data)=>{
+  let result = data.json()
+  .then((responsedata)=>{
+    console.log(responsedata)
+  })
+}).catch((error)=>{
+  console.log(error)
+})
+
+
+let CurrentDate = new Date()
+console.log(CurrentDate);
+console.log(CurrentDate)
+
